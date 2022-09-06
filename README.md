@@ -9,10 +9,10 @@
 
 ---
 ### Table of Content
-[Folder Structure](#folder-structure)
-[Excuting the Program](#executing-the-program)
-[Task_1](#task_1)
-[Task_2](#task_2)
+- [Folder Structure](#folder-structure)
+- [Executing the Program](#executing-the-program)
+- [Task_1](#task_1)
+- [Task_2](#task_2)
 
 
 
