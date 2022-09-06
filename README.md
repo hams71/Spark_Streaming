@@ -8,6 +8,15 @@
 #### Then another process will read this stream of data from the CSV folder do some aggregation and write in parquet format (tricky part as had to use foreachBatch).
 
 ---
+### Table of Content
+[Folder Structure](#folder-structure)
+[Excuting the Program](#executing-the-program)
+[Task_1](#task_1)
+[Task_2](#task_2)
+
+
+
+---
 
 
 ### Folder Structure
