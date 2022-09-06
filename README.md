@@ -28,13 +28,13 @@
 
 ### Task_1
 #### We use Spark Streaming api to read the data from JSON folder and do some tranformation from nested to flat.
-#### - Analytics
-####    - Clicks
-####    - Impressions
-#### - Sales
-####    - Quantity
-####    - Total_Price
-#### - Datetime
+- Analytics
+  - Clicks
+  - Impressions
+- Sales
+  - Quantity
+  - Total_Price
+- Datetime
 #### Provide a schema and change the datatypes of the columns
 #### Write that data in CSV to a CSV folder.
 
