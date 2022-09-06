@@ -4,7 +4,7 @@
 
 ---
 
-#### The purpose of doing this was to learn abit about Spark Streaming and to be able to read the documentation and to use that to work around this. 
+- The purpose of doing this was to learn abit about Spark Streaming and to be able to read the documentation and to use that to work around this. 
 #### Generated Click Stream data in JSON having certain attributes. 
 #### Read this JSON data in stream and did some transformation then write in CSV format in a different folder named as CSV.
 #### Another process will read this stream of data from the CSV folder do some aggregation and write in parquet format (interesting part as had to use foreachBatch).
