@@ -50,10 +50,10 @@
 
 ### Executing the Program
 - Before starting check that the folders inside the **data** folder is empty (CSV, Parquet, JSON, Checkpoints folder) once that is checked.
-- Run the main.py file and that will generate the data in **JSON**
-- Run the **Task_1** it will consume the JSON files from JSON folder and ten will write data in CSV format to the CSV folder
-- Run the **Task_2** it will consume the CSV files from the CSV folder and write the in Parquet format to parquet folder
-- Note the order of execution does not matter if you run Task_2 before Task_1 it will just wait for the files from come. 
+- Run the main.py file and that will generate the data in **JSON**.
+- Run the **Task_1** it will consume the JSON files from JSON folder and ten will write data in CSV format to the CSV folder.
+- Run the **Task_2** it will consume the CSV files from the CSV folder and write the in Parquet format to parquet folder.
+- Note the order of execution does not matter if you run Task_2 before Task_1 it will just wait for the files to come. 
 
 ---
 
