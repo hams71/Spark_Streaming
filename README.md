@@ -41,13 +41,13 @@ Spark Structued Streaming to read and write data in stream and also perform aggr
 
 ### Folder Structure
 - python_file
-  - main.py   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   -> Python file to generate the JSON data
-  - data      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -> Inside this folder, more folders for JSON, CSV, parquet data to be stored in.
+  - main.py   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   - Python file to generate the JSON data
+  - data      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  - Inside this folder, more folders for JSON, CSV, parquet data to be stored in.
     - json_files
     - csv_files
     - parquest_files  
-- Task_1.ipynb   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> This task reads the JSON data does some transformation and writes data in CSV to another folder
-- Task_2.ipynb   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> This task reads the CSV data does some transformation and writes data in Parquet to another folder
+- Task_1.ipynb   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This task reads the JSON data does some transformation and writes data in CSV to another folder
+- Task_2.ipynb   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This task reads the CSV data does some transformation and writes data in Parquet to another folder
 
 - The checkpoints folder will be created after we execute Task_1 and Task_2.
 
