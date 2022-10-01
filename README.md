@@ -45,7 +45,7 @@ Spark Structued Streaming to read and write data in stream and also perform aggr
   - data      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  - Inside this folder, more folders for JSON, CSV, parquet data to be stored in.
     - json_files
     - csv_files
-    - parquest_files  
+    - parquet_files  
 - Task_1.ipynb   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This task reads the JSON data does some transformation and writes data in CSV to another folder
 - Task_2.ipynb   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This task reads the CSV data does some transformation and writes data in Parquet to another folder
 
@@ -55,15 +55,15 @@ Spark Structued Streaming to read and write data in stream and also perform aggr
 
 ### Executing the Program
 - Before starting, check that the folders inside the **data** folder are empty (CSV, Parquet, JSON, Checkpoints folder) once that is checked.
-- Run the **main.py** file and that will generate the data in JSON.
-- Run the **Task_1** it will consume the JSON files from JSON folder and then will write data in CSV format to the CSV folder.
-- Run the **Task_2** it will consume the CSV files from the CSV folder and write the in Parquet format to parquet folder.
+- Run **main.py** file and that will generate the data in JSON.
+- Run **Task_1** it will consume the JSON files from JSON folder and then will write data in CSV format to the CSV folder.
+- Run **Task_2** it will consume the CSV files from the CSV folder and write the in Parquet format to parquet folder.
 - Note the order of execution does not matter if you run Task_2 before Task_1 it will just wait for the files to come. 
 
 ---
 
 ### Task_1
-- We use Spark Streaming to read the data from JSON folder and do some tranformation from nested to flat.
+- We use Spark Streaming to read the data from JSON folder and do some tranformation.
 - The schema looks something like.
     - Analytics
       - Clicks
@@ -72,6 +72,7 @@ Spark Structued Streaming to read and write data in stream and also perform aggr
       - Quantity
       - Total_Price
     - Datetime
+- This is a nested schema will need to change this in order to write in CSV format.
 - Provide a schema and change the datatypes of the columns so that aggregations can be performed.
 - Write that data in CSV format to a CSV folder.
 
@@ -97,8 +98,8 @@ Spark Structued Streaming to read and write data in stream and also perform aggr
 
 
 - In the above example we define a window of 5 minutes and a watermark of 15 minutes.
-- So an even occured at 12:04 (Event Time) will fall in the 12:00 - 12:05 window but due to some network issue we recieve this event at 12:11 (Arrive Time). This event will fall in the 12:00 - 12:05 window as the Watermark was of 15 minutes (11 < 15). If it were to arrive at 12:17 (17 > 15) then it would have been discarded.
-
+- So an event occured at 12:04 (Event Time) will fall in the 12:00 - 12:05 window but due to some network issue we recieve this event at 12:11 (Arrive Time). This event will still fall in the 12:00 - 12:05 window as the Watermark was of 15 minutes (11 < 15). If it were to arrive at 12:17 (17 > 15) then it would have been discarded.
+- Watermark is waiting for a certain timeframe for a late event if within time frame then will consider its value else will discard it.
 
 - Reason to use foreachBatch was that when we define the WaterMark of certain time that has to complete before it can write that to the folder
 - Lets say we defined a **Window** of 10 seconds and **Watermark** of 30 seconds. The complete output for this 10 second window will be displayed after 30 seconds when the watermark has passed and in the 10 seconds windows we will get empty data. 
